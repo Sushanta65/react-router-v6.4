@@ -5,6 +5,8 @@ import App from './App'
 import './index.css'
 import About from './components/About/About'
 import Contact from './components/Contact/Contact'
+import Users from './components/Users/Users'
+import User from './components/User/User'
 
 const route = createBrowserRouter([
   {
@@ -18,6 +20,16 @@ const route = createBrowserRouter([
       {
         path: '/contact',
         element: <Contact></Contact>
+      },
+      {
+        path: '/users',
+        loader: () => fetch('https://jsonplaceholder.typicode.com/users'),
+        element: <Users></Users>
+      },
+      {
+        path:'/user/:userId',
+        loader: ({params}) => fetch(`https://jsonplaceholder.typicode.com/users/${params.userId}`),
+        element: <User></User>
       }
     ]
   },

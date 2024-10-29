@@ -1,0 +1,8 @@
+.navbarr a{
+    padding: 5px;
+}
+.navbarr a:hover{
+    background: #0668a1;
+    padding: 5px;
+    color: white;
+}
