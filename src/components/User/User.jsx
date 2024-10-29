@@ -12,7 +12,7 @@ const User = ({user}) => {
                 <p>{email}</p>
                 <p>{phone}</p>
                 <p>{website}</p>
-                <Link to={`user/${id}`}>
+                <Link to={`/user/${id}`}>
                 <button type="button" class="py-2 px-3 border bg-gray-200 rounded-md hover:bg-gray-300 my-2">Show Details</button>
                 </Link>
             </div>
